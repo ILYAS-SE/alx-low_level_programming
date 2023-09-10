@@ -1,2 +1,21 @@
 #!/bin/bash
-gcc -S masm=intel $CFILE
+
+# Check if the CFILE environment variable is set
+if [ -z "$CFILE" ]; then
+  echo "Error: CFILE environment variable is not set."
+  exit 1
+fi
+
+# Create the output file name by replacing .c with .s
+OUTPUT_FILE="${CFILE%.c}.s"
+
+# Generate the assembly code using GCC
+gcc -S -masm=intel "$CFILE" -o "$OUTPUT_FILE"
+
+# Check if the compilation was successful
+if [ $? -eq 0 ]; then
+  echo "Assembly code saved to $OUTPUT_FILE"
+else
+  echo "Error: Compilation failed."
+fi
+
