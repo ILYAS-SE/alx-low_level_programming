@@ -2,8 +2,6 @@
 /**
  * main - Entry point
  *
- * Description: This program prints the size of various data types on the computer.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
