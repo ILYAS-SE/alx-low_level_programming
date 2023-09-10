@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - this is a prinf function
+ * main - Entry point
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
