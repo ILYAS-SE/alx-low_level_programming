@@ -7,14 +7,16 @@
  */
 int main(void)
 {
-char hex_digit;
-for (hex_digit = '0'; hex_digit <= '9'; hex_digit++)
-{
-putchar(hex_digit);
+int digit = '0';
+ while (digit <= '9')
+}    
+putchar(digit);
+if (digit != '9')
+}        
+putchar(',');
+putchar(' ');
 }
-for (hex_digit = 'a'; hex_digit <= 'f'; hex_digit++)
-{
-putchar(hex_digit);
+digit++;
 }
 putchar('\n');
 return (0);
