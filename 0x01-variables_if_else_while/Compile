@@ -1,0 +1,6 @@
+
+gcs -s $CFILE
+gr(digit + '0'); // Convert the digit to a character and print it
+      |                       ^
+5-print_numbers.c:13:23: note: (this will be reported only once per input file)
+cc1: all warnings being treated as errorscs -s $CFILE

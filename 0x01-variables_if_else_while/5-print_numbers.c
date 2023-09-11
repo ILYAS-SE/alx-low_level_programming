@@ -10,7 +10,7 @@ int main(void)
 int digit = 0;
 while (digit <= 9)
 {
-putchar(digit + '0'); // Convert the digit to a character and print it
+putchar(digit + '0'); /* Convert the digit to a character and print it */
 digit++;
 }
 putchar('\n');
