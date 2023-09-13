@@ -1,21 +1,21 @@
-/**
- * main -  that prints all natural numbers from n to 98
- * followed by a new line.
- * Return: Always void.
- */
 #include <stdio.h>
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-unsigned long int fib1 = 1, fib2 = 2;
+unsigned long int a = 1, b = 2, c;
 int count;
-
-printf("%lu", fib1);
-for (count = 1; count < 98; count++)
+printf("%lu, %lu", a, b);
+for (count = 2; count < 98; count++)
 {
-printf(", %lu", fib2);
-fib2 = fib1 + fib2;
-fib1 = fib2 - fib1;
+c = a + b;
+printf(", %lu", c);
+a = b;
+b = c;
 }
 printf("\n");
 return (0);
