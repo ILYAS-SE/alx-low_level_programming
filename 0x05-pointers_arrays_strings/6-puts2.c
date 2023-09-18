@@ -1,17 +1,16 @@
-/**
-* print_line - function that prints 10 times the numbers, from 0 to 14.
-* The line should end with a \n.
-* @n: para checked
-* Return: void.
-*/
 #include "main.h"
-void print_line(int n)
+
+/**
+ * Prints every other character of a string, starting with the first character.
+ * @str: The string to be printed.
+ */
+void puts2(char *str)
 {
 int i = 0;
-while (i < n)
+while (str[i] != '\0')
 {
-_putchar(95);
-i++;
+putchar(str[i]);
+i += 2; /* Move to the next character (every other character) */
 }
-_putchar('\n');
+putchar('\n'); /* Print a newline character after the loop */
 }
