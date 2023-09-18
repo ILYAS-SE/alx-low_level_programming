@@ -1,4 +1,4 @@
-#include "main.h"  // Include the necessary header file with _putchar declaration.
+#include "main.h"
 
 /**
  * print_rev - Prints a string in reverse followed by a new line.
@@ -13,7 +13,8 @@ while (s[length] != '\0')
 length++;
 }
 /* Print the string in reverse */
-for (int i = length - 1; i >= 0; i--)
+int i;
+for (i = length - 1; i >= 0; i--)
 {
 _putchar(s[i]);
 }
