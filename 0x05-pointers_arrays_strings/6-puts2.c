@@ -9,8 +9,8 @@ void puts2(char *str)
 int i = 0;
 while (str[i] != '\0')
 {
-_putchar(str[i]);
-i += 2; // Move to the next character (every other character)
+putchar(str[i]);
+i += 2; /* Move to the next character (every other character) */
 }
-_putchar('\n'); // Print a newline character after the loop
+putchar('\n'); /* Print a newline character after the loop */
 }
