@@ -1,16 +1,27 @@
-#include "main.h"
-
 /**
- * puts2 - Prints every other character of a string, starting with the first character.
- * @str: The string to be printed.
- */
-void puts2(char *str)
+* print_diagonal - function that draws a diagonal line on the terminal.
+* The line should end with a \n.
+* @n: para checked
+* Return: void.
+*/
+#include "main.h"
+void print_diagonal(int n)
 {
-int i = 0;
-while (str[i] != '\0')
+int i, j;
+if (n <= 0)
 {
-putchar(str[i]);
-i += 2; /* Move to the next character (every other character) */
+_putchar('\n');
 }
-putchar('\n'); /* Print a newline character after the loop */
+else
+{
+for (i = 0; i < n; i++)
+{
+for (j = 1; j <= i; j++)
+{
+_putchar(' ');
+}
+_putchar(92);
+_putchar('\n');
+}
+}
 }
