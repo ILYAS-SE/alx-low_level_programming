@@ -17,7 +17,7 @@ length++;
 /* Print the string in reverse */
 for (i = length - 1; i >= 0; i--)
 {
-putchar(s[i]); // Use putchar instead of _putchar
+putchar(s[i]); /* Use putchar instead of _putchar */
 }
-putchar('\n'); // Use putchar instead of _putchar
+putchar('\n'); /* Use putchar instead of _putchar */
 }
