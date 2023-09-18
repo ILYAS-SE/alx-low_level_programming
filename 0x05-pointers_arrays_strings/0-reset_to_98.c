@@ -1,10 +1,10 @@
-int main(void)
-{
-    int n;
+#include "main.h"
 
-    n = 402;
-    printf("n=%d\n", n);
-    reset_to_98(&n); // Pass the address of 'n' to the function
-    printf("n=%d\n", n); // 'n' should now be 98
-    return (0);
+/**
+ * reset_to_98 - Updates the value pointed to by a pointer to 98.
+ * @n: Pointer to an integer whose value needs to be updated.
+ */
+void reset_to_98(int *n)
+{
+*n = 98;
 }
