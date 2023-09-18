@@ -15,5 +15,5 @@ while (*s != '\0')
 length++;   /* Increment the length for each character */
 s++;        /* Move to the next character in the string */
 }
-return length;  /* Return the calculated length */
+return (0);
 }
