@@ -8,8 +8,8 @@ void _puts(char *str)
 {
 while (*str != '\0')
 {
-putchar(*str); // Print the current character
-str++;         // Move to the next character
+putchar(*str); /* Print the current character */
+str++;         /* Move to the next character */
 }
-putchar('\n'); // Print a new line after the string
+putchar('\n'); /* Print a new line after the string */
 }
