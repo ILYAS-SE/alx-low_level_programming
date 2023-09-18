@@ -1,16 +1,27 @@
 #include "main.h"
 
 /**
- * puts2 - Prints every other character of a string, starting with the first character.
- * @str: The string to be printed.
+ * rev_string - Reverses a string.
+ * @s: The string to be reversed.
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
-int i = 0;
-while (str[i] != '\0')
+int length = 0;
+int start = 0;
+int end;
+/* Find the length of the string */
+while (s[length] != '\0')
 {
-putchar(str[i]);
-i += 2; /* Move to the next character (every other character) */
+length++;
 }
-putchar('\n'); /* Print a newline character after the loop */
+end = length - 1;
+/* Swap characters from the start and end of the string */
+while (start < end)
+{
+char temp = s[start];
+s[start] = s[end];
+s[end] = temp;
+start++;
+end--;
+}
 }
