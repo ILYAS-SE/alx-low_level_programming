@@ -1,23 +1,26 @@
 #include "main.h"
 /**
- * change all first charater for lowercase to uppercase
- * @n: pointer
- *
- * Return: n
+ * cap_string - capitalizes all words of a string
+ * @s: input string.
+ * Return: the pointer to dest.
  */
-char *cap_string(char *n)
+char *cap_string(char *s)
 {
-char *new = n;
-while (*n)
+int i = 0;
+while (s[i] != '\0')
 {
-if ((*n >= 1 && *n <= 47) || (*n >= 58 && *n <= 64) || (*n >= 91 && *n <= 96))
+if (s[i] >= 'a' && s[i] <= 'z')
 {
-if (*(n + 1) >= 'a' && *(n + 1) <= 'z')
+if (i == 0 || s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n' ||
+s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+s[i - 1] == '}')
 {
-*(n + 1) = *(n + 1) - ('a' - 'A');
+s[i] -= 32;
 }
 }
-n++;
+i++;
 }
-return (new);
+return (s);
 }
