@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * cap_string - change all first charater for lowercase to uppercase
+ * change all first charater for lowercase to uppercase
  * @n: pointer
  *
  * Return: n
