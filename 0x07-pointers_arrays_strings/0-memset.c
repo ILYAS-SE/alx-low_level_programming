@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- *_memset -   fills memory with a constant byte .
- *@s: pointer block of memory to fill .
- *@b: constant byte .
- *@n: bytes of the memory .
- *Return: pointer s .
+ * _memset - function that fills memory with a constant byte.
+ * @s: the address of memory to print
+ * @b: the character to add.
+ * @n: the number of bytes
+ * Return: s.
  */
-char *_memcpy(char *s, char *b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+int i;
 
-	for (i = 0; i < n; i++)
-	{
-		dest[i] = src[i];
-	}
-
-	return (dest);
+for (i = 0; n > 0; ++i)
+{
+s[i] = b;
+n--;
+}
+return (s);
 }
