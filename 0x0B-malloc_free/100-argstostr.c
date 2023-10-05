@@ -1,21 +1,43 @@
-#include <stdlib.h>
+
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * free_grid - frees the memory allocate for the grid
- * created by alloc_grid()
- * @grid: grid to free
- * @height: height of the grid
+ * argstostr - Concatenates all the arguments of the program.
+ * @ac: The argument count.
+ * @av: Array of arguments.
+ *
+ * Return: If ac == 0 or av == NULL - NULL.
+ * Otherwise - a pointer to a new string, or NULL if it fails.
  */
-void free_grid(int **grid, int height)
+char *argstostr(int ac, char **av)
 {
-int i;
+int i, n, r = 0, l = 0;
+char *str;
 
-if (grid == NULL || height == 0)
-return;
+if (ac == 0 || av == NULL)
+return (NULL);
 
-for (i = 0; i < height; i++)
-free(grid[i]);
+for (i = 0; i < ac; i++)
+{
+for (n = 0; av[i][n]; n++)
+l++;
+}
+l += ac;
 
-free(grid);
+str = malloc(sizeof(char) * l + 1);
+if (str == NULL)
+return (NULL);
+for (i = 0; i < ac; i++)
+{
+for (n = 0; av[i][n]; n++)
+{
+str[r] = av[i][n];
+r++;
+}
+if (str[r] == '\0')
+{
+str[r++] = '\n';
+}
+}
+return (str);
 }
