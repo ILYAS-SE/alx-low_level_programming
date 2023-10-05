@@ -15,7 +15,8 @@ char *argstostr(int ac, char **av)
 {
 	int pos, total_len, i, j, len, place;
 	char *arg, *result;
-	if (ac <= 0 || av == NULL)
+if (ac <= 0 || av == NULL)
+
 	{
 		return (NULL);
 	}
@@ -63,6 +64,7 @@ int _strlen(char *str)
 {
 	int len = 0;
 	while (str[len] != '\0')
+
 	{
 		len++;
 	}
