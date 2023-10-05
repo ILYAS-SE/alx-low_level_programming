@@ -1,15 +1,15 @@
-nclude "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 int lengt(char *s);
 /**
- *  * str_concat - prints buffer in hexa
- *   *
- *    * @s1: the first string.
- *     * @s2: the second string.
- *      *
- *       * Return: Nothing.
- *        */
+ * str_concat - prints buffer in hexa
+ *
+ * @s1: the first string.
+ * @s2: the second string.
+ *
+ * Return: Nothing.
+ */
 char *str_concat(char *s1, char *s2)
 {
 	int i = 0, j, size1, size2;
@@ -41,12 +41,12 @@ char *str_concat(char *s1, char *s2)
 	return (new);
 }
 /**
- *  * lengt - prints buffer in hexa
- *   *
- *    * @s: the first string.
- *     *
- *      * Return: Nothing.
- *       */
+ * lengt - prints buffer in hexa
+ *
+ * @s: the first string.
+ *
+ * Return: Nothing.
+ */
 int lengt(char *s)
 {
 

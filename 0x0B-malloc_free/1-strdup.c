@@ -1,13 +1,13 @@
-nclude "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 /**
- *  * _strdup - prints buffer in hexa
- *   * @str: the size of the memory to print
- *    *
- *     * Return: Nothing.
- *      */
+ * _strdup - prints buffer in hexa
+ * @str: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
 char *_strdup(char *str)
 {
 	int i, size;

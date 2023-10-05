@@ -2,13 +2,13 @@ nclude "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *  * alloc_grid - prints a grid of integers
- *   *
- *    * @width: the address of the two dimensional grid
- *     * @height: width of the grid
- *      *
- *       * Return: Nothing.
- *        */
+ * alloc_grid - prints a grid of integers
+ *
+ * @width: the address of the two dimensional grid
+ * @height: width of the grid
+ *
+ * Return: Nothing.
+ */
 int **alloc_grid(int width, int height)
 {
 	int **matrix;

@@ -1,15 +1,15 @@
-nclude "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 int _strlen(char *str);
 /**
- *  * argstostr - prints a grid of integers
- *   *
- *    * @ac: the address of the two dimensional grid
- *     * @av: width of the grid
- *      *
- *       * Return: Nothing.
- *        */
+ * argstostr - prints a grid of integers
+ *
+ * @ac: the address of the two dimensional grid
+ * @av: width of the grid
+ *
+ * Return: Nothing.
+ */
 
 char *argstostr(int ac, char **av)
 {
@@ -53,12 +53,12 @@ char *argstostr(int ac, char **av)
 	return (result);
 }
 /**
- *  * _strlen - prints a grid of integers
- *   *
- *    * @str: the address of the two dimensional grid
- *     *
- *      * Return: Nothing.
- *       */
+ * _strlen - prints a grid of integers
+ *
+ * @str: the address of the two dimensional grid
+ *
+ * Return: Nothing.
+ */
 int _strlen(char *str)
 {
 	int len = 0;
