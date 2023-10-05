@@ -1,70 +1,21 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-int _strlen(char *str);
+#include "main.h"
+
 /**
- * argstostr - prints a grid of integers
- *
- * @ac: the address of the two dimensional grid
- * @av: width of the grid
- *
- * Return: Nothing.
+ * free_grid - frees the memory allocate for the grid
+ * created by alloc_grid()
+ * @grid: grid to free
+ * @height: height of the grid
  */
-
-char *argstostr(int ac, char **av)
+void free_grid(int **grid, int height)
 {
-	int pos, total_len, i, j, len, place;
-	char *arg, *result;
-if (ac <= 0 || av == NULL)
-	{
-		return (NULL);
-	}
+int i;
 
-	total_len = 0;
-	for (i = 0; i < ac; i++)
-	{
-		arg = av[i];
-		if (arg == NULL)
-		{
-			return (NULL);
-		}
-		total_len += _strlen(arg) + 1;
-	}
-	place = (total_len + 1) * sizeof(char) + 0;
-	result = (char *)malloc(place);
-	if (result == NULL)
-	{
-		return (NULL);
-	}
+if (grid == NULL || height == 0)
+return;
 
-	pos = 0;
-	for (i = 0; i < ac; i++)
-	{
-		arg = av[i];
-		len = _strlen(arg);
-		for (j = 0; j < len; j++)
-		{
-			result[pos++] = arg[j];
-		}
-		result[pos++] = '\n';
-	}
+for (i = 0; i < height; i++)
+free(grid[i]);
 
-	result[pos] = '\0';
-	return (result);
-}
-/**
- * _strlen - prints a grid of integers
- *
- * @str: the address of the two dimensional grid
- *
- * Return: Nothing.
- */
-int _strlen(char *str)
-{
-	int len = 0;
-while (str[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+free(grid);
 }
