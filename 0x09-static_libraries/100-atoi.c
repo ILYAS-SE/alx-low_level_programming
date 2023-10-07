@@ -1,25 +1,15 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _atoi - Convert a string to an integer.
- * @s: The pointer to convert
+ * atoi - function that converts a string
+ *       into an integer
  *
- * Return: A integer
+ * @s: string input pointer
+ *
+ * Return: 0 if there is no number
  */
+
 int _atoi(char *s)
 {
-unsigned int num = 0;
-int sign = 1;
 
-do
-{
-if (*s == '-')
-sign *= -1;
-else if (*s >= '0' && *s <= '9')
-num = (num * 10) + (*s - '0');
-else if (num > 0)
-break;
-}while (*s++);
-
-return (num * sign);
 }
