@@ -9,7 +9,7 @@
  */
 void _print(char *str, int l)
 {
-        int i, j;
+	int i, j;
 
 	i = j = 0;
 	while (i < l)
@@ -20,7 +20,7 @@ void _print(char *str, int l)
 			_putchar(str[i]);
 		i++;
 	}
-	
+
 	_putchar('\n');
 	free(str);
 }
@@ -38,7 +38,7 @@ void _print(char *str, int l)
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
-	
+
 	mulrem = addrem = 0;
 	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
@@ -70,7 +70,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 int check_for_digits(char **av)
 {
 	int i, j;
-	
+
 	for (i = 1; i < 3; i++)
 	{
 		for (j = 0; av[i][j]; j++)
@@ -92,7 +92,7 @@ int check_for_digits(char **av)
 void init(char *str, int l)
 {
 	int i;
-	
+
 	for (i = 0; i < l; i++)
 		str[i] = '0';
 	str[i] = '\0';
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
 	char *a;
 	char *t;
 	char e[] = "Error\n";
-	
+
 	if (argc != 3 || check_for_digits(argv))
 	{
 		for (ti = 0; e[ti]; ti++)
