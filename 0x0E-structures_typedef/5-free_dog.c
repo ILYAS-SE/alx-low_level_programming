@@ -3,7 +3,7 @@
 
 /**
  * free_dog - frees dogs
- *@d: arraye
+ * @d: arraye
  * Description: Free memory for struct
  */
 void free_dog(dog_t *d)
