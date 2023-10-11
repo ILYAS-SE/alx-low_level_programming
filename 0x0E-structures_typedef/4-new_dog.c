@@ -11,7 +11,9 @@ char *_copy(char *src)
 {
 	char *ptr;
 	int i, len;
+
 	if (src == NULL)
+
 	{
 		return (NULL);
 	}
@@ -39,20 +41,20 @@ char *_copy(char *src)
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
-{
+{	
 	dog_t *snoopie;
 	char *new_name, *new_owner;
+
 	if (name == NULL || owner == NULL)
+
 	{
 		return (NULL);
 	}
-	
 	snoopie = malloc(sizeof(dog_t));
 	if (snoopie == NULL)
 	{
 		return (NULL);
 	}
-	
 	new_name = _copy(name);
 	if (new_name == NULL)
 	{
