@@ -3,16 +3,15 @@
 
 /**
  * free_dog - frees dogs
- * @d: pointer to dog to free
- *
- * Return: void
+ *@d: arraye
+ * Description: Free memory for struct
  */
 void free_dog(dog_t *d)
 {
 	if (d0)
-			{
-				free(d->name);
-				free(d->owner);
-				free(d);
-			}
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
